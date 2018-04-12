@@ -98,6 +98,22 @@
 		D0374938207EFDD2001A0EBA /* TencentOpenApi_IOS_Bundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D037492A207EFDD2001A0EBA /* TencentOpenApi_IOS_Bundle.bundle */; };
 		D0374939207EFDD2001A0EBA /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D037492B207EFDD2001A0EBA /* TencentOpenAPI.framework */; };
 		D037493E207F003A001A0EBA /* UMCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D037493D207F003A001A0EBA /* UMCommon.framework */; };
+		D0374954207F3976001A0EBA /* LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0374953207F3976001A0EBA /* LoginView.m */; };
+		D0374957207F39B2001A0EBA /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0374956207F39B2001A0EBA /* LoginViewController.m */; };
+		D037495E207F3B38001A0EBA /* IntegralView.m in Sources */ = {isa = PBXBuildFile; fileRef = D037495D207F3B38001A0EBA /* IntegralView.m */; };
+		D0374961207F3B44001A0EBA /* IntegralViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0374960207F3B44001A0EBA /* IntegralViewController.m */; };
+		D0374967207F411D001A0EBA /* CreditRulesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0374966207F411D001A0EBA /* CreditRulesViewController.m */; };
+		D037496C207F41C2001A0EBA /* MyAnswerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D037496B207F41C2001A0EBA /* MyAnswerViewController.m */; };
+		D0374976207F42B2001A0EBA /* MyQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0374975207F42B2001A0EBA /* MyQuestionViewController.m */; };
+		D0374979207F42BC001A0EBA /* MySwerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0374978207F42BC001A0EBA /* MySwerViewController.m */; };
+		D037497C207F42C6001A0EBA /* InvitedMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D037497B207F42C6001A0EBA /* InvitedMeViewController.m */; };
+		D0374986207F43D8001A0EBA /* UIView+ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D037497F207F43D8001A0EBA /* UIView+ViewController.m */; };
+		D0374987207F43D8001A0EBA /* NinaPagerView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0374980207F43D8001A0EBA /* NinaPagerView.m */; };
+		D0374988207F43D8001A0EBA /* NinaBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0374981207F43D8001A0EBA /* NinaBaseView.m */; };
+		D037498D207F46F4001A0EBA /* MyPostsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D037498C207F46F4001A0EBA /* MyPostsViewController.m */; };
+		D0374992207F4722001A0EBA /* MyPostedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0374991207F4722001A0EBA /* MyPostedViewController.m */; };
+		D0374997207F4749001A0EBA /* MyCommentedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0374996207F4749001A0EBA /* MyCommentedViewController.m */; };
+		D037499B207F4DB1001A0EBA /* CarouseView.m in Sources */ = {isa = PBXBuildFile; fileRef = D037499A207F4DB1001A0EBA /* CarouseView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -244,6 +260,39 @@
 		D037492A207EFDD2001A0EBA /* TencentOpenApi_IOS_Bundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TencentOpenApi_IOS_Bundle.bundle; sourceTree = "<group>"; };
 		D037492B207EFDD2001A0EBA /* TencentOpenAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TencentOpenAPI.framework; sourceTree = "<group>"; };
 		D037493D207F003A001A0EBA /* UMCommon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UMCommon.framework; sourceTree = "<group>"; };
+		D0374952207F3976001A0EBA /* LoginView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginView.h; sourceTree = "<group>"; };
+		D0374953207F3976001A0EBA /* LoginView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginView.m; sourceTree = "<group>"; };
+		D0374955207F39B2001A0EBA /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		D0374956207F39B2001A0EBA /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		D037495C207F3B38001A0EBA /* IntegralView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IntegralView.h; sourceTree = "<group>"; };
+		D037495D207F3B38001A0EBA /* IntegralView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IntegralView.m; sourceTree = "<group>"; };
+		D037495F207F3B44001A0EBA /* IntegralViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IntegralViewController.h; sourceTree = "<group>"; };
+		D0374960207F3B44001A0EBA /* IntegralViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IntegralViewController.m; sourceTree = "<group>"; };
+		D0374965207F411D001A0EBA /* CreditRulesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CreditRulesViewController.h; sourceTree = "<group>"; };
+		D0374966207F411D001A0EBA /* CreditRulesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CreditRulesViewController.m; sourceTree = "<group>"; };
+		D037496A207F41C2001A0EBA /* MyAnswerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyAnswerViewController.h; sourceTree = "<group>"; };
+		D037496B207F41C2001A0EBA /* MyAnswerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyAnswerViewController.m; sourceTree = "<group>"; };
+		D0374974207F42B2001A0EBA /* MyQuestionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyQuestionViewController.h; sourceTree = "<group>"; };
+		D0374975207F42B2001A0EBA /* MyQuestionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyQuestionViewController.m; sourceTree = "<group>"; };
+		D0374977207F42BC001A0EBA /* MySwerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MySwerViewController.h; sourceTree = "<group>"; };
+		D0374978207F42BC001A0EBA /* MySwerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MySwerViewController.m; sourceTree = "<group>"; };
+		D037497A207F42C6001A0EBA /* InvitedMeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InvitedMeViewController.h; sourceTree = "<group>"; };
+		D037497B207F42C6001A0EBA /* InvitedMeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InvitedMeViewController.m; sourceTree = "<group>"; };
+		D037497F207F43D8001A0EBA /* UIView+ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ViewController.m"; sourceTree = "<group>"; };
+		D0374980207F43D8001A0EBA /* NinaPagerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NinaPagerView.m; sourceTree = "<group>"; };
+		D0374981207F43D8001A0EBA /* NinaBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NinaBaseView.m; sourceTree = "<group>"; };
+		D0374982207F43D8001A0EBA /* UIView+ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ViewController.h"; sourceTree = "<group>"; };
+		D0374983207F43D8001A0EBA /* NinaPagerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NinaPagerView.h; sourceTree = "<group>"; };
+		D0374984207F43D8001A0EBA /* UIParameter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIParameter.h; sourceTree = "<group>"; };
+		D0374985207F43D8001A0EBA /* NinaBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NinaBaseView.h; sourceTree = "<group>"; };
+		D037498B207F46F4001A0EBA /* MyPostsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyPostsViewController.h; sourceTree = "<group>"; };
+		D037498C207F46F4001A0EBA /* MyPostsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyPostsViewController.m; sourceTree = "<group>"; };
+		D0374990207F4722001A0EBA /* MyPostedViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyPostedViewController.h; sourceTree = "<group>"; };
+		D0374991207F4722001A0EBA /* MyPostedViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyPostedViewController.m; sourceTree = "<group>"; };
+		D0374995207F4749001A0EBA /* MyCommentedViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyCommentedViewController.h; sourceTree = "<group>"; };
+		D0374996207F4749001A0EBA /* MyCommentedViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyCommentedViewController.m; sourceTree = "<group>"; };
+		D0374999207F4DB1001A0EBA /* CarouseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarouseView.h; sourceTree = "<group>"; };
+		D037499A207F4DB1001A0EBA /* CarouseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarouseView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -409,6 +458,7 @@
 		D037452E207DD8B8001A0EBA /* MainInterface */ = {
 			isa = PBXGroup;
 			children = (
+				D037494F207F3951001A0EBA /* Login */,
 				D0374533207DD921001A0EBA /* My */,
 				D0374532207DD91B001A0EBA /* Mall */,
 				D0374531207DD909001A0EBA /* Hospital */,
@@ -457,6 +507,7 @@
 		D0374533207DD921001A0EBA /* My */ = {
 			isa = PBXGroup;
 			children = (
+				D0374958207F3AE5001A0EBA /* Secondary */,
 				D037453D207DD953001A0EBA /* View */,
 				D037453C207DD94D001A0EBA /* Controller */,
 			);
@@ -565,6 +616,8 @@
 		D0374561207DE2C7001A0EBA /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				D0374998207F4D8C001A0EBA /* XSScrollview */,
+				D037497E207F43D8001A0EBA /* NinaPagerView */,
 				D037486B207EE573001A0EBA /* YM */,
 				D0374562207DE31D001A0EBA /* RY */,
 			);
@@ -829,6 +882,235 @@
 			path = normal;
 			sourceTree = "<group>";
 		};
+		D037494F207F3951001A0EBA /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				D0374951207F3961001A0EBA /* Controller */,
+				D0374950207F395D001A0EBA /* View */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		D0374950207F395D001A0EBA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D0374952207F3976001A0EBA /* LoginView.h */,
+				D0374953207F3976001A0EBA /* LoginView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D0374951207F3961001A0EBA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D0374955207F39B2001A0EBA /* LoginViewController.h */,
+				D0374956207F39B2001A0EBA /* LoginViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D0374958207F3AE5001A0EBA /* Secondary */ = {
+			isa = PBXGroup;
+			children = (
+				D0374989207F46E0001A0EBA /* MyPosts */,
+				D0374968207F41AF001A0EBA /* MyAnswer */,
+				D0374959207F3B17001A0EBA /* Integral */,
+			);
+			path = Secondary;
+			sourceTree = "<group>";
+		};
+		D0374959207F3B17001A0EBA /* Integral */ = {
+			isa = PBXGroup;
+			children = (
+				D0374962207F40E7001A0EBA /* CreditRules */,
+				D037495B207F3B27001A0EBA /* Controller */,
+				D037495A207F3B23001A0EBA /* View */,
+			);
+			path = Integral;
+			sourceTree = "<group>";
+		};
+		D037495A207F3B23001A0EBA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D037495C207F3B38001A0EBA /* IntegralView.h */,
+				D037495D207F3B38001A0EBA /* IntegralView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D037495B207F3B27001A0EBA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D037495F207F3B44001A0EBA /* IntegralViewController.h */,
+				D0374960207F3B44001A0EBA /* IntegralViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D0374962207F40E7001A0EBA /* CreditRules */ = {
+			isa = PBXGroup;
+			children = (
+				D0374963207F4108001A0EBA /* Controller */,
+			);
+			path = CreditRules;
+			sourceTree = "<group>";
+		};
+		D0374963207F4108001A0EBA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D0374965207F411D001A0EBA /* CreditRulesViewController.h */,
+				D0374966207F411D001A0EBA /* CreditRulesViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D0374968207F41AF001A0EBA /* MyAnswer */ = {
+			isa = PBXGroup;
+			children = (
+				D0374970207F428C001A0EBA /* InvitedMe */,
+				D037496F207F426B001A0EBA /* MySwer */,
+				D037496E207F424B001A0EBA /* MyQuestion */,
+				D0374969207F41B5001A0EBA /* Controller */,
+			);
+			path = MyAnswer;
+			sourceTree = "<group>";
+		};
+		D0374969207F41B5001A0EBA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D037496A207F41C2001A0EBA /* MyAnswerViewController.h */,
+				D037496B207F41C2001A0EBA /* MyAnswerViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D037496E207F424B001A0EBA /* MyQuestion */ = {
+			isa = PBXGroup;
+			children = (
+				D0374971207F429C001A0EBA /* Controller */,
+			);
+			path = MyQuestion;
+			sourceTree = "<group>";
+		};
+		D037496F207F426B001A0EBA /* MySwer */ = {
+			isa = PBXGroup;
+			children = (
+				D0374972207F42A1001A0EBA /* Controllre */,
+			);
+			path = MySwer;
+			sourceTree = "<group>";
+		};
+		D0374970207F428C001A0EBA /* InvitedMe */ = {
+			isa = PBXGroup;
+			children = (
+				D0374973207F42A7001A0EBA /* Controller */,
+			);
+			path = InvitedMe;
+			sourceTree = "<group>";
+		};
+		D0374971207F429C001A0EBA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D0374974207F42B2001A0EBA /* MyQuestionViewController.h */,
+				D0374975207F42B2001A0EBA /* MyQuestionViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D0374972207F42A1001A0EBA /* Controllre */ = {
+			isa = PBXGroup;
+			children = (
+				D0374977207F42BC001A0EBA /* MySwerViewController.h */,
+				D0374978207F42BC001A0EBA /* MySwerViewController.m */,
+			);
+			path = Controllre;
+			sourceTree = "<group>";
+		};
+		D0374973207F42A7001A0EBA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D037497A207F42C6001A0EBA /* InvitedMeViewController.h */,
+				D037497B207F42C6001A0EBA /* InvitedMeViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D037497E207F43D8001A0EBA /* NinaPagerView */ = {
+			isa = PBXGroup;
+			children = (
+				D037497F207F43D8001A0EBA /* UIView+ViewController.m */,
+				D0374980207F43D8001A0EBA /* NinaPagerView.m */,
+				D0374981207F43D8001A0EBA /* NinaBaseView.m */,
+				D0374982207F43D8001A0EBA /* UIView+ViewController.h */,
+				D0374983207F43D8001A0EBA /* NinaPagerView.h */,
+				D0374984207F43D8001A0EBA /* UIParameter.h */,
+				D0374985207F43D8001A0EBA /* NinaBaseView.h */,
+			);
+			path = NinaPagerView;
+			sourceTree = "<group>";
+		};
+		D0374989207F46E0001A0EBA /* MyPosts */ = {
+			isa = PBXGroup;
+			children = (
+				D0374993207F472F001A0EBA /* MyCommented */,
+				D037498E207F470A001A0EBA /* MyPosted */,
+				D037498A207F46E8001A0EBA /* Controller */,
+			);
+			path = MyPosts;
+			sourceTree = "<group>";
+		};
+		D037498A207F46E8001A0EBA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D037498B207F46F4001A0EBA /* MyPostsViewController.h */,
+				D037498C207F46F4001A0EBA /* MyPostsViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D037498E207F470A001A0EBA /* MyPosted */ = {
+			isa = PBXGroup;
+			children = (
+				D037498F207F4718001A0EBA /* Controller */,
+			);
+			path = MyPosted;
+			sourceTree = "<group>";
+		};
+		D037498F207F4718001A0EBA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D0374990207F4722001A0EBA /* MyPostedViewController.h */,
+				D0374991207F4722001A0EBA /* MyPostedViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D0374993207F472F001A0EBA /* MyCommented */ = {
+			isa = PBXGroup;
+			children = (
+				D0374994207F473C001A0EBA /* Controller */,
+			);
+			path = MyCommented;
+			sourceTree = "<group>";
+		};
+		D0374994207F473C001A0EBA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D0374995207F4749001A0EBA /* MyCommentedViewController.h */,
+				D0374996207F4749001A0EBA /* MyCommentedViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D0374998207F4D8C001A0EBA /* XSScrollview */ = {
+			isa = PBXGroup;
+			children = (
+				D0374999207F4DB1001A0EBA /* CarouseView.h */,
+				D037499A207F4DB1001A0EBA /* CarouseView.m */,
+			);
+			path = XSScrollview;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -977,12 +1259,28 @@
 				D037454A207DDB73001A0EBA /* DiaryViewController.m in Sources */,
 				D03744FB207DB5F6001A0EBA /* ViewController.m in Sources */,
 				D0374560207DDEF2001A0EBA /* XSNavigationViewController.m in Sources */,
+				D0374988207F43D8001A0EBA /* NinaBaseView.m in Sources */,
+				D0374987207F43D8001A0EBA /* NinaPagerView.m in Sources */,
 				D0374544207DDB4F001A0EBA /* FirstViewController.m in Sources */,
+				D037499B207F4DB1001A0EBA /* CarouseView.m in Sources */,
+				D0374961207F3B44001A0EBA /* IntegralViewController.m in Sources */,
+				D037498D207F46F4001A0EBA /* MyPostsViewController.m in Sources */,
+				D0374997207F4749001A0EBA /* MyCommentedViewController.m in Sources */,
 				D0374547207DDB66001A0EBA /* DiaryView.m in Sources */,
+				D0374967207F411D001A0EBA /* CreditRulesViewController.m in Sources */,
 				D0374506207DB5F7001A0EBA /* main.m in Sources */,
+				D0374979207F42BC001A0EBA /* MySwerViewController.m in Sources */,
+				D0374992207F4722001A0EBA /* MyPostedViewController.m in Sources */,
+				D037496C207F41C2001A0EBA /* MyAnswerViewController.m in Sources */,
+				D0374957207F39B2001A0EBA /* LoginViewController.m in Sources */,
+				D037495E207F3B38001A0EBA /* IntegralView.m in Sources */,
+				D0374986207F43D8001A0EBA /* UIView+ViewController.m in Sources */,
 				D037455C207DDC20001A0EBA /* MyView.m in Sources */,
 				D0374541207DDB43001A0EBA /* FirstView.m in Sources */,
 				D037452D207DD6F5001A0EBA /* XSMainTabBarViewController.m in Sources */,
+				D037497C207F42C6001A0EBA /* InvitedMeViewController.m in Sources */,
+				D0374954207F3976001A0EBA /* LoginView.m in Sources */,
+				D0374976207F42B2001A0EBA /* MyQuestionViewController.m in Sources */,
 				D0374553207DDBB1001A0EBA /* MallViewController.m in Sources */,
 				D0374550207DDBA5001A0EBA /* HospitalView.m in Sources */,
 				D0374556207DDBC6001A0EBA /* MallView.m in Sources */,

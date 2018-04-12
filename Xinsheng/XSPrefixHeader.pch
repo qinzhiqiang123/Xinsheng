@@ -12,7 +12,10 @@
 
 #import <RongIMKit/RongIMKit.h>
 #import <UMShare/UMShare.h>
-
+#import "UIParameter.h"
+#import "NinaPagerView.h"
+#import <UShareUI/UShareUI.h>
+#import "CarouseView.h"
 
 //主题色
 #define MAIN_COLOR [UIColor redColor]
@@ -20,6 +23,11 @@
 //通用字体大小
 #define MAIN_FONT  [UIFont systemFontOfSize:14]
 
+//屏幕宽度
+#define MAIN_WIDTH [UIScreen mainScreen].bounds.size.width
+
+//屏幕高度
+#define MAIN_HEIGHT [UIScreen mainScreen].bounds.size.height
 //背景颜色
 #define BACK_COLOR [UIColor whiteColor]
 

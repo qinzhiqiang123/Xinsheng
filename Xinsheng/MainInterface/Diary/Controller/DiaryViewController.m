@@ -7,7 +7,7 @@
 //
 
 #import "DiaryViewController.h"
-
+#import "DiaryView.h"
 @interface DiaryViewController ()
 
 @end
@@ -16,6 +16,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    DiaryView *diarView =[[DiaryView alloc]initWithFrame:self.view.bounds];
+    [self.view addSubview:diarView];
     // Do any additional setup after loading the view.
 }
 

@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void(^my_block)(id);
 @interface MyView : UIView
 
+
+@property (nonatomic,copy)my_block myBlock;
+-(void)showBlock:(my_block)mBlock;
 @end

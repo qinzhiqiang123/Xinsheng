@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void(^hospital_block)(id);
 @interface HospitalView : UIView
+
+@property (nonatomic,copy)hospital_block hospitalBlock;
+
+-(void)showHosBlock:(hospital_block)hosBlock;
 
 @end

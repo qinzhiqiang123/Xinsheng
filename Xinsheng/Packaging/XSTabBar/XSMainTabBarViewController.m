@@ -64,11 +64,11 @@
               [self VcSet:@"首页" :@"icon_chat_hover" :@"icon_chat" :obj];
          } else if ([obj isKindOfClass:[DiaryViewController class]]) {
 
-              [self VcSet:@"商城" :@"contact_icon_hover" :@"contact_icon" :obj];
+              [self VcSet:@"社区" :@"contact_icon_hover" :@"contact_icon" :obj];
              
          } else if ([obj isKindOfClass:[HospitalViewController class]]) {
 
-              [self VcSet:@"医院" :@"square_hover" :@"square" :obj];
+              [self VcSet:@"在线咨询" :@"square_hover" :@"square" :obj];
              
          } else if ([obj isKindOfClass:[MallViewController class]]) {
 
@@ -91,7 +91,7 @@
     [[UIImage imageNamed:imageStr] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     obj.tabBarItem.selectedImage =
     [[UIImage imageNamed:selectImage] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    obj.tabBarController.navigationItem.title = titleStr;
+  
     obj.view.backgroundColor=[UIColor whiteColor];
 }
 
