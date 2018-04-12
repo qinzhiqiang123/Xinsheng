@@ -7,8 +7,11 @@
 //
 
 #import "AppDelegate.h"
+#import "XSMainTabBarViewController.h"
+#import "XSNavigationViewController.h"
+#define DEFAULTS [NSUserDefaults standardUserDefaults]
 
-@interface AppDelegate ()
+@interface AppDelegate ()<RCIMConnectionStatusDelegate>
 
 @end
 
@@ -17,10 +20,140 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.12312
-    UIViewController *vc =[[UIViewController alloc]init];
-    UINavigationController *nav=[[UINavigationController alloc]initWithRootViewController:vc];
+    XSMainTabBarViewController *mainTabBarVC = [[XSMainTabBarViewController alloc] init];
+    XSNavigationViewController *rootNavi =
+    [[XSNavigationViewController alloc] initWithRootViewController:mainTabBarVC];
+    self.window.rootViewController = rootNavi;
     
+    [self RYIM];
+    [self UM];
     return YES;
+}
+
+
+
+//友盟
+-(void)UM
+{
+    [self confitUShareSettings];
+    [self configUSharePlatforms];
+}
+-(void)confitUShareSettings
+{
+    /*
+     * 打开图片水印
+     */
+    [UMSocialGlobal shareInstance].isUsingWaterMark = YES;
+    [UMSocialGlobal shareInstance].isUsingHttpsWhenShareContent = NO;
+}
+- (void)configUSharePlatforms
+{
+    /* 设置微信的appKey和appSecret */
+    [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_WechatSession appKey:@"wxdc1e388c3822c80b" appSecret:@"3baf1193c85774b3fd9d18447d76cab0" redirectURL:@"http://mobile.umeng.com/social"];
+    
+    /*设置QQ平台的appID*/
+    [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_QQ appKey:@"1105821097"  appSecret:nil redirectURL:@"http://mobile.umeng.com/social"];
+    
+    /* 设置新浪的appKey和appSecret */
+    [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_Sina appKey:@"3921700954"  appSecret:@"04b48b094faeb16683c32669824ebdad" redirectURL:@"https://sns.whalecloud.com/sina2/callback"];
+}
+
+//融云
+-(void)RYIM{
+
+    [[RCIM sharedRCIM] initWithAppKey:@"mgb7ka1nm4dhg"];
+
+    //设置会话列表头像和会话页面头像
+
+    [[RCIM sharedRCIM] setConnectionStatusDelegate:self];
+
+    [RCIM sharedRCIM].globalConversationPortraitSize = CGSizeMake(46, 46);
+    //    [RCIM sharedRCIM].portraitImageViewCornerRadius = 10;
+    //开启用户信息和群组信息的持久化
+    [RCIM sharedRCIM].enablePersistentUserInfoCache = YES;
+
+    //设置群组内用户信息源。如果不使用群名片功能，可以不设置
+    //  [RCIM sharedRCIM].groupUserInfoDataSource = RCDDataSource;
+    //  [RCIM sharedRCIM].enableMessageAttachUserInfo = YES;
+    //设置接收消息代理
+    [RCIM sharedRCIM].receiveMessageDelegate = self;
+    //    [RCIM sharedRCIM].globalMessagePortraitSize = CGSizeMake(46, 46);
+    //开启输入状态监听
+    [RCIM sharedRCIM].enableTypingStatus = YES;
+
+    //开启发送已读回执
+    [RCIM sharedRCIM].enabledReadReceiptConversationTypeList =
+    @[ @(ConversationType_PRIVATE), @(ConversationType_DISCUSSION), @(ConversationType_GROUP) ];
+
+    //开启多端未读状态同步
+    [RCIM sharedRCIM].enableSyncReadStatus = YES;
+
+    //设置显示未注册的消息
+    //如：新版本增加了某种自定义消息，但是老版本不能识别，开发者可以在旧版本中预先自定义这种未识别的消息的显示
+    [RCIM sharedRCIM].showUnkownMessage = YES;
+    [RCIM sharedRCIM].showUnkownMessageNotificaiton = YES;
+
+    //开启消息@功能（只支持群聊和讨论组, App需要实现群成员数据源groupMemberDataSource）
+    [RCIM sharedRCIM].enableMessageMentioned = YES;
+
+    //开启消息撤回功能
+    [RCIM sharedRCIM].enableMessageRecall = YES;
+
+    //  设置头像为圆形
+    //  [RCIM sharedRCIM].globalMessageAvatarStyle = RC_USER_AVATAR_CYCLE;
+    //  [RCIM sharedRCIM].globalConversationAvatarStyle = RC_USER_AVATAR_CYCLE;
+    //   设置优先使用WebView打开URL
+    //  [RCIM sharedRCIM].embeddedWebViewPreferred = YES;
+
+    //  设置通话视频分辨率
+    //  [[RCCallClient sharedRCCallClient] setVideoProfile:RC_VIDEO_PROFILE_480P];
+
+    //设置Log级别，开发阶段打印详细log
+    [RCIMClient sharedRCIMClient].logLevel = RC_Log_Level_Info;
+
+
+    
+
+//    ZgBwoREn81wiHHrzCx1G7UiA8cB3nPio56mw4Lzd4hQvMmbarmVQLTWMJKyC9xE4EOD9+MCxSZgZTAPKLEl4Sjd9hGD2ho30
+    [[RCIM sharedRCIM] connectWithToken:@"lPNCxSaE55t4AjCA9CpjEvcXVp29bZzw9OpY3jHsN0lkBsVJzlr4Fc4YvQiQ35fm2HSRqcTy1NHOFaYXOhiv/w=="     success:^(NSString *userId) {
+        NSLog(@"登陆成功。当前登录的用户ID：%@", userId);
+    } error:^(RCConnectErrorCode status) {
+        NSLog(@"登陆的错误码为:%d", status);
+    } tokenIncorrect:^{
+        //token过期或者不正确。
+        //如果设置了token有效期并且token过期，请重新请求您的服务器获取新的token
+        //如果没有设置token有效期却提示token错误，请检查您客户端和服务器的appkey是否匹配，还有检查您获取token的流程。
+        NSLog(@"token错误");
+    }];
+    
+}
+
+// 支持所有iOS系统
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
+{
+    //6.3的新的API调用，是为了兼容国外平台(例如:新版facebookSDK,VK等)的调用[如果用6.2的api调用会没有回调],对国内平台没有影响
+    BOOL result = [[UMSocialManager defaultManager] handleOpenURL:url sourceApplication:sourceApplication annotation:annotation];
+    if (!result) {
+        // 其他如支付等SDK的回调
+    }
+    return result;
+}
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey, id> *)options
+{
+    //6.3的新的API调用，是为了兼容国外平台(例如:新版facebookSDK,VK等)的调用[如果用6.2的api调用会没有回调],对国内平台没有影响
+    BOOL result = [[UMSocialManager defaultManager]  handleOpenURL:url options:options];
+    if (!result) {
+        // 其他如支付等SDK的回调
+    }
+    return result;
+}
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
+{
+    BOOL result = [[UMSocialManager defaultManager] handleOpenURL:url];
+    if (!result) {
+        // 其他如支付等SDK的回调
+    }
+    return result;
 }
 
 

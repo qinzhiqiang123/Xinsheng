@@ -1,0 +1,29 @@
+//
+//  XSPrefixHeader.pch
+//  Xinsheng
+//
+//  Created by Simson on 2018/4/11.
+//  Copyright © 2018年 Simson. All rights reserved.
+//
+
+#ifndef XSPrefixHeader_pch
+#define XSPrefixHeader_pch
+
+
+#import <RongIMKit/RongIMKit.h>
+#import <UMShare/UMShare.h>
+
+
+//主题色
+#define MAIN_COLOR [UIColor redColor]
+
+//通用字体大小
+#define MAIN_FONT  [UIFont systemFontOfSize:14]
+
+//背景颜色
+#define BACK_COLOR [UIColor whiteColor]
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* XSPrefixHeader_pch */
