@@ -7,17 +7,25 @@
 //
 
 #import "MallViewController.h"
-
+#import "MallView.h"
+#import "ProductDetailViewController.h"
 @interface MallViewController ()
-
 @end
 
 @implementation MallViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+ 
+    MallView *mallView =[[MallView alloc]initWithFrame:self.view.bounds];
+    [mallView showMallBlock:^(id sender) {
+        ProductDetailViewController *proVc =[[ProductDetailViewController alloc]init];
+        [self.navigationController pushViewController:proVc animated:YES];
+    }];
+    [self.view addSubview:mallView];
     // Do any additional setup after loading the view.
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

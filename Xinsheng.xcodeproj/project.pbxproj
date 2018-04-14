@@ -114,6 +114,10 @@
 		D0374992207F4722001A0EBA /* MyPostedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0374991207F4722001A0EBA /* MyPostedViewController.m */; };
 		D0374997207F4749001A0EBA /* MyCommentedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0374996207F4749001A0EBA /* MyCommentedViewController.m */; };
 		D037499B207F4DB1001A0EBA /* CarouseView.m in Sources */ = {isa = PBXBuildFile; fileRef = D037499A207F4DB1001A0EBA /* CarouseView.m */; };
+		D0F9FA6320803E7C006EB75A /* ProduceTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F9FA6220803E7C006EB75A /* ProduceTableViewCell.m */; };
+		D0F9FA6720803EA6006EB75A /* ProductModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F9FA6620803EA6006EB75A /* ProductModel.m */; };
+		D0F9FA6D20807B83006EB75A /* ProductDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F9FA6C20807B83006EB75A /* ProductDetailView.m */; };
+		D0F9FA7020807B92006EB75A /* ProductDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F9FA6F20807B92006EB75A /* ProductDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -293,6 +297,14 @@
 		D0374996207F4749001A0EBA /* MyCommentedViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyCommentedViewController.m; sourceTree = "<group>"; };
 		D0374999207F4DB1001A0EBA /* CarouseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarouseView.h; sourceTree = "<group>"; };
 		D037499A207F4DB1001A0EBA /* CarouseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarouseView.m; sourceTree = "<group>"; };
+		D0F9FA6120803E7C006EB75A /* ProduceTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProduceTableViewCell.h; sourceTree = "<group>"; };
+		D0F9FA6220803E7C006EB75A /* ProduceTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProduceTableViewCell.m; sourceTree = "<group>"; };
+		D0F9FA6520803EA6006EB75A /* ProductModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProductModel.h; sourceTree = "<group>"; };
+		D0F9FA6620803EA6006EB75A /* ProductModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProductModel.m; sourceTree = "<group>"; };
+		D0F9FA6B20807B83006EB75A /* ProductDetailView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProductDetailView.h; sourceTree = "<group>"; };
+		D0F9FA6C20807B83006EB75A /* ProductDetailView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProductDetailView.m; sourceTree = "<group>"; };
+		D0F9FA6E20807B92006EB75A /* ProductDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProductDetailViewController.h; sourceTree = "<group>"; };
+		D0F9FA6F20807B92006EB75A /* ProductDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProductDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -498,6 +510,8 @@
 		D0374532207DD91B001A0EBA /* Mall */ = {
 			isa = PBXGroup;
 			children = (
+				D0F9FA6820807AE7006EB75A /* ProductDetail */,
+				D0F9FA6420803E80006EB75A /* Model */,
 				D037453B207DD949001A0EBA /* View */,
 				D037453A207DD944001A0EBA /* Controller */,
 			);
@@ -582,6 +596,8 @@
 			children = (
 				D0374554207DDBC6001A0EBA /* MallView.h */,
 				D0374555207DDBC6001A0EBA /* MallView.m */,
+				D0F9FA6120803E7C006EB75A /* ProduceTableViewCell.h */,
+				D0F9FA6220803E7C006EB75A /* ProduceTableViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1111,6 +1127,42 @@
 			path = XSScrollview;
 			sourceTree = "<group>";
 		};
+		D0F9FA6420803E80006EB75A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D0F9FA6520803EA6006EB75A /* ProductModel.h */,
+				D0F9FA6620803EA6006EB75A /* ProductModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D0F9FA6820807AE7006EB75A /* ProductDetail */ = {
+			isa = PBXGroup;
+			children = (
+				D0F9FA6A20807AFA006EB75A /* View */,
+				D0F9FA6920807AF3006EB75A /* Controller */,
+			);
+			path = ProductDetail;
+			sourceTree = "<group>";
+		};
+		D0F9FA6920807AF3006EB75A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D0F9FA6E20807B92006EB75A /* ProductDetailViewController.h */,
+				D0F9FA6F20807B92006EB75A /* ProductDetailViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D0F9FA6A20807AFA006EB75A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D0F9FA6B20807B83006EB75A /* ProductDetailView.h */,
+				D0F9FA6C20807B83006EB75A /* ProductDetailView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1261,19 +1313,23 @@
 				D0374560207DDEF2001A0EBA /* XSNavigationViewController.m in Sources */,
 				D0374988207F43D8001A0EBA /* NinaBaseView.m in Sources */,
 				D0374987207F43D8001A0EBA /* NinaPagerView.m in Sources */,
+				D0F9FA6320803E7C006EB75A /* ProduceTableViewCell.m in Sources */,
 				D0374544207DDB4F001A0EBA /* FirstViewController.m in Sources */,
 				D037499B207F4DB1001A0EBA /* CarouseView.m in Sources */,
 				D0374961207F3B44001A0EBA /* IntegralViewController.m in Sources */,
 				D037498D207F46F4001A0EBA /* MyPostsViewController.m in Sources */,
+				D0F9FA7020807B92006EB75A /* ProductDetailViewController.m in Sources */,
 				D0374997207F4749001A0EBA /* MyCommentedViewController.m in Sources */,
 				D0374547207DDB66001A0EBA /* DiaryView.m in Sources */,
 				D0374967207F411D001A0EBA /* CreditRulesViewController.m in Sources */,
 				D0374506207DB5F7001A0EBA /* main.m in Sources */,
 				D0374979207F42BC001A0EBA /* MySwerViewController.m in Sources */,
+				D0F9FA6720803EA6006EB75A /* ProductModel.m in Sources */,
 				D0374992207F4722001A0EBA /* MyPostedViewController.m in Sources */,
 				D037496C207F41C2001A0EBA /* MyAnswerViewController.m in Sources */,
 				D0374957207F39B2001A0EBA /* LoginViewController.m in Sources */,
 				D037495E207F3B38001A0EBA /* IntegralView.m in Sources */,
+				D0F9FA6D20807B83006EB75A /* ProductDetailView.m in Sources */,
 				D0374986207F43D8001A0EBA /* UIView+ViewController.m in Sources */,
 				D037455C207DDC20001A0EBA /* MyView.m in Sources */,
 				D0374541207DDB43001A0EBA /* FirstView.m in Sources */,
