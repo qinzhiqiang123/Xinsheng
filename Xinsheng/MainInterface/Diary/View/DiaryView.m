@@ -78,12 +78,28 @@
         tabLabel.textColor=[UIColor blackColor];
         tabLabel.textAlignment=NSTextAlignmentCenter;
         [headView addSubview:tabLabel];
+        
+        UIButton *tabButton =[[UIButton alloc]initWithFrame:CGRectMake(15+i*(80+(MAIN_WIDTH-80*3-30)/2),CGRectGetMaxY(topImageVidew.frame)+15, 80, 100)];
+        [tabButton addTarget:self action:@selector(tabButtonClick:) forControlEvents:UIControlEventTouchUpInside];
+        [tabButton setTitle:tabArray[i] forState:UIControlStateNormal];
+        [tabButton setTitleColor:[UIColor clearColor] forState:UIControlStateNormal];
+        [headView addSubview:tabButton];
       
     }
     
 
     
     return headView;
+}
+
+-(void)tabButtonClick:(UIButton *)sender{
+    if (_diaryBlock!=nil) {
+        _diaryBlock(sender.titleLabel.text);
+    }
+}
+
+-(void)showDiaryBlock:(diary_block) diaBlock{
+    _diaryBlock=diaBlock;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 270;

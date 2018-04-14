@@ -16,6 +16,8 @@
 #import "NinaPagerView.h"
 #import <UShareUI/UShareUI.h>
 #import "CarouseView.h"
+#import "AFNetworking.h"
+#import "HttpRequest.h"
 
 //获取导航栏+状态栏的高度
 #define getRectNavAndStatusHight  self.navigationController.navigationBar.frame.size.height+[[UIApplication sharedApplication] statusBarFrame].size.height

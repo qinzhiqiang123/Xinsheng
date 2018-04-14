@@ -48,6 +48,9 @@
 }
 - (void)configUSharePlatforms
 {
+//    [[UMSocialManager defaultManager]  umSocialAppkey:@"Your Appkey"];
+    
+    [[UMSocialManager defaultManager] setUmSocialAppkey:@"5625a653e0f55ab6550052e6"];
     /* 设置微信的appKey和appSecret */
     [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_WechatSession appKey:@"wxdc1e388c3822c80b" appSecret:@"3baf1193c85774b3fd9d18447d76cab0" redirectURL:@"http://mobile.umeng.com/social"];
     

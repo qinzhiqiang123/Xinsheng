@@ -8,6 +8,7 @@
 
 #import "DiaryViewController.h"
 #import "DiaryView.h"
+#import "SecondayViewController.h"
 @interface DiaryViewController ()
 
 @end
@@ -17,10 +18,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     DiaryView *diarView =[[DiaryView alloc]initWithFrame:self.view.bounds];
+    [diarView showDiaryBlock:^(NSString *sender) {
+        SecondayViewController *secVc=[[SecondayViewController alloc]init];
+        secVc.title=sender;
+        [self.navigationController pushViewController:secVc animated:YES];
+    }];
     [self.view addSubview:diarView];
     // Do any additional setup after loading the view.
 }
-
+-(void)viewWillAppear:(BOOL)animated{
+    self.navigationController.navigationBarHidden=NO;
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

@@ -18,10 +18,22 @@
     [super viewDidLoad];
     self.view.backgroundColor=[UIColor whiteColor];
     self.title=@"登录";
-    LoginView *loginView =[[LoginView alloc]initWithFrame:self.view.bounds];
+    LoginView *loginView =[[LoginView alloc]initWithFrame:CGRectMake(0, 0, MAIN_WIDTH, MAIN_HEIGHT)];
+    [loginView showLoginBlock:^(id sender) {
+        [self.navigationController popViewControllerAnimated:YES];
+    }];
     [self.view addSubview:loginView];
     // Do any additional setup after loading the view.
 }
+
+-(void)viewWillAppear:(BOOL)animated{
+    self.navigationController.navigationBarHidden=YES;
+}
+
+-(void)viewWillDisappear:(BOOL)animated{
+    self.navigationController.navigationBarHidden=NO;
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

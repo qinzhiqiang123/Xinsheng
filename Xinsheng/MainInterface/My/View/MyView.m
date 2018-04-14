@@ -114,7 +114,7 @@
     if (cell==nil) {
         cell=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:nil];
         cell.selectionStyle=UITableViewCellSelectionStyleNone;
-        UIImageView *zsImageView=[[UIImageView alloc]initWithFrame:CGRectMake(15, 17.5, 20, 20)];
+        UIImageView *zsImageView=[[UIImageView alloc]initWithFrame:CGRectMake(15, 12.5, 20, 20)];
         zsImageView.image=[UIImage imageNamed:myArray[indexPath.row]];
         zsImageView.backgroundColor=[UIColor redColor];
         [cell.contentView addSubview:zsImageView];

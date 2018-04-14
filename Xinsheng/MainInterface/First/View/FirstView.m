@@ -88,10 +88,18 @@
         tabLabel.textColor=[UIColor blackColor];
         tabLabel.textAlignment=NSTextAlignmentCenter;
         [headView addSubview:tabLabel];
+        UIButton *tabButton =[[UIButton alloc]initWithFrame:CGRectMake(15+i*(40+(MAIN_WIDTH-40*4-30)/3), CGRectGetMaxY(carouseView.frame)+15, 40, 60)];
+        [tabButton addTarget:self action:@selector(tabButtonClick:) forControlEvents:UIControlEventTouchUpInside];
+        [tabButton setTitle:tabArray[i] forState:UIControlStateNormal];
+        [tabButton setTitleColor:[UIColor clearColor] forState:UIControlStateNormal];
+        [headView addSubview:tabButton];
         if (i>3) {
             tabImageView.frame=CGRectMake(15+(i-4)*(40+(MAIN_WIDTH-40*4-30)/3), CGRectGetMaxY(carouseView.frame)+15+70, 40, 40);
             tabLabel.frame=CGRectMake(15+(i-4)*(40+(MAIN_WIDTH-40*4-30)/3), CGRectGetMaxY(tabImageView.frame)+10, 40, 14);
+            tabButton.frame=CGRectMake(15+(i-4)*(40+(MAIN_WIDTH-40*4-30)/3), CGRectGetMaxY(carouseView.frame)+15+70, 40, 60);
         }
+        
+    
     }
     
     
@@ -106,6 +114,12 @@
     [headView addSubview:msLabel];
     
     return headView;
+}
+
+-(void)tabButtonClick:(UIButton *)sender{
+    if (_firstBlock!=nil) {
+        _firstBlock(sender.titleLabel.text);
+    }
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 115+45;

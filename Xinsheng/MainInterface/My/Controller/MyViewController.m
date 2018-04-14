@@ -49,6 +49,15 @@
     // Do any additional setup after loading the view.
 }
 
+-(void)viewWillAppear:(BOOL)animated{
+    self.navigationController.navigationBarHidden=YES;
+}
+
+-(void)viewWillDisappear:(BOOL)animated{
+    self.navigationController.navigationBarHidden=NO;
+}
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
