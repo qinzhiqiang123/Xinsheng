@@ -7,8 +7,8 @@
 //
 
 #import "AppDelegate.h"
-#import "XSMainTabBarViewController.h"
-#import "XSNavigationViewController.h"
+#import "QKTabBarController.h"
+#import "WSMovieController.h"
 #define DEFAULTS [NSUserDefaults standardUserDefaults]
 
 @interface AppDelegate ()<RCIMConnectionStatusDelegate>
@@ -20,13 +20,45 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.12312
-    XSMainTabBarViewController *mainTabBarVC = [[XSMainTabBarViewController alloc] init];
-    XSNavigationViewController *rootNavi =
-    [[XSNavigationViewController alloc] initWithRootViewController:mainTabBarVC];
-    self.window.rootViewController = rootNavi;
+   self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
     [self RYIM];
     [self UM];
+    
+    
+    NSString *versionCache = [[NSUserDefaults standardUserDefaults] objectForKey:@"VersionCache"];//本地缓存的版本号  第一次启动的时候本地是没有缓存版本号的。
+    NSString *version = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];//当前应用版本号
+    
+    if (![versionCache isEqualToString:version]) //如果本地缓存的版本号和当前应用版本号不一样，则是第一次启动（更新版本也算第一次启动）
+    {
+        WSMovieController *wsCtrl = [[WSMovieController alloc]init];
+        
+        NSLog(@"dsadadsda:%@",[[NSBundle mainBundle]pathForResource:@"qidong"ofType:@"mp4"]);
+        wsCtrl.movieURL = [NSURL fileURLWithPath:[[NSBundle mainBundle]pathForResource:@"qidong"ofType:@"mp4"]];//选择本地的视屏
+        [wsCtrl showWsMoviewBlock:^(id sender) {
+            QKTabBarController *tabBarVC = [[QKTabBarController alloc] init];
+//            [ChatDemoHelper shareHelper];
+//            [ChatDemoHelper shareHelper].mainVC =tabBarVC;
+            self.window.rootViewController = tabBarVC;
+            [self.window makeKeyAndVisible];
+        }];
+        self.window.rootViewController = wsCtrl;
+        [self.window makeKeyAndVisible];
+        //设置上下面这句话，将当前版本缓存到本地，下次对比一样，就不走启动视屏了。
+        //也可以将这句话放在WSMovieController.m的进入应用方法里面
+        //为了让每次都可以看到启动视屏，这句话先注释掉
+        //[[NSUserDefaults standardUserDefaults] setObject:version forKey:@"VersionCache"];
+        
+    }else{
+        //不是首次启动
+        QKTabBarController *tabBarVC = [[QKTabBarController alloc] init];
+//        [ChatDemoHelper shareHelper];
+//        [ChatDemoHelper shareHelper].mainVC =tabBarVC;
+        self.window.rootViewController = tabBarVC;
+        [self.window makeKeyAndVisible];
+    }
+    
+    
     return YES;
 }
 

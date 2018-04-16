@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D01EE4BF20842D810021BC16 /* QKNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D01EE4BE20842D810021BC16 /* QKNavigationController.m */; };
+		D01EE4C220842D8F0021BC16 /* QKTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = D01EE4C020842D8E0021BC16 /* QKTabBarController.m */; };
+		D01EE4C620842EFD0021BC16 /* WSMovieController.m in Sources */ = {isa = PBXBuildFile; fileRef = D01EE4C520842EFD0021BC16 /* WSMovieController.m */; };
+		D01EE4C820842FBA0021BC16 /* qidong.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = D01EE4C720842F440021BC16 /* qidong.mp4 */; };
 		D03744F8207DB5F6001A0EBA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D03744F7207DB5F6001A0EBA /* AppDelegate.m */; };
 		D03744FB207DB5F6001A0EBA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D03744FA207DB5F6001A0EBA /* ViewController.m */; };
 		D03744FE207DB5F6001A0EBA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D03744FC207DB5F6001A0EBA /* Main.storyboard */; };
@@ -15,7 +19,6 @@
 		D0374506207DB5F7001A0EBA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D0374505207DB5F7001A0EBA /* main.m */; };
 		D0374510207DB5F7001A0EBA /* XinshengTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D037450F207DB5F7001A0EBA /* XinshengTests.m */; };
 		D037451B207DB5F7001A0EBA /* XinshengUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D037451A207DB5F7001A0EBA /* XinshengUITests.m */; };
-		D037452D207DD6F5001A0EBA /* XSMainTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D037452C207DD6F5001A0EBA /* XSMainTabBarViewController.m */; };
 		D0374541207DDB43001A0EBA /* FirstView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0374540207DDB43001A0EBA /* FirstView.m */; };
 		D0374544207DDB4F001A0EBA /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0374543207DDB4F001A0EBA /* FirstViewController.m */; };
 		D0374547207DDB66001A0EBA /* DiaryView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0374546207DDB66001A0EBA /* DiaryView.m */; };
@@ -26,7 +29,6 @@
 		D0374556207DDBC6001A0EBA /* MallView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0374555207DDBC6001A0EBA /* MallView.m */; };
 		D0374559207DDBF0001A0EBA /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0374558207DDBF0001A0EBA /* MyViewController.m */; };
 		D037455C207DDC20001A0EBA /* MyView.m in Sources */ = {isa = PBXBuildFile; fileRef = D037455B207DDC20001A0EBA /* MyView.m */; };
-		D0374560207DDEF2001A0EBA /* XSNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D037455F207DDEF2001A0EBA /* XSNavigationViewController.m */; };
 		D037457D207DE482001A0EBA /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D037457C207DE482001A0EBA /* AssetsLibrary.framework */; };
 		D037457F207DE488001A0EBA /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D037457E207DE488001A0EBA /* AudioToolbox.framework */; };
 		D0374581207DE48E001A0EBA /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0374580207DE48E001A0EBA /* AVFoundation.framework */; };
@@ -159,6 +161,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D01EE4BD20842D810021BC16 /* QKNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QKNavigationController.h; sourceTree = "<group>"; };
+		D01EE4BE20842D810021BC16 /* QKNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QKNavigationController.m; sourceTree = "<group>"; };
+		D01EE4C020842D8E0021BC16 /* QKTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QKTabBarController.m; sourceTree = "<group>"; };
+		D01EE4C120842D8E0021BC16 /* QKTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QKTabBarController.h; sourceTree = "<group>"; };
+		D01EE4C420842EFD0021BC16 /* WSMovieController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSMovieController.h; sourceTree = "<group>"; };
+		D01EE4C520842EFD0021BC16 /* WSMovieController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSMovieController.m; sourceTree = "<group>"; };
+		D01EE4C720842F440021BC16 /* qidong.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = qidong.mp4; sourceTree = "<group>"; };
 		D03744F3207DB5F6001A0EBA /* Xinsheng.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Xinsheng.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D03744F6207DB5F6001A0EBA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D03744F7207DB5F6001A0EBA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -175,8 +184,6 @@
 		D0374516207DB5F7001A0EBA /* XinshengUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XinshengUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D037451A207DB5F7001A0EBA /* XinshengUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XinshengUITests.m; sourceTree = "<group>"; };
 		D037451C207DB5F7001A0EBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D037452B207DD6F5001A0EBA /* XSMainTabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XSMainTabBarViewController.h; sourceTree = "<group>"; };
-		D037452C207DD6F5001A0EBA /* XSMainTabBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XSMainTabBarViewController.m; sourceTree = "<group>"; };
 		D037453E207DD983001A0EBA /* XSPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XSPrefixHeader.pch; sourceTree = "<group>"; };
 		D037453F207DDB43001A0EBA /* FirstView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstView.h; sourceTree = "<group>"; };
 		D0374540207DDB43001A0EBA /* FirstView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstView.m; sourceTree = "<group>"; };
@@ -198,8 +205,6 @@
 		D0374558207DDBF0001A0EBA /* MyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyViewController.m; sourceTree = "<group>"; };
 		D037455A207DDC20001A0EBA /* MyView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyView.h; sourceTree = "<group>"; };
 		D037455B207DDC20001A0EBA /* MyView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyView.m; sourceTree = "<group>"; };
-		D037455E207DDEF2001A0EBA /* XSNavigationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XSNavigationViewController.h; sourceTree = "<group>"; };
-		D037455F207DDEF2001A0EBA /* XSNavigationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XSNavigationViewController.m; sourceTree = "<group>"; };
 		D037457C207DE482001A0EBA /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		D037457E207DE488001A0EBA /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		D0374580207DE48E001A0EBA /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -454,6 +459,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D01EE4C320842EEC0021BC16 /* StartVideo */ = {
+			isa = PBXGroup;
+			children = (
+				D01EE4C720842F440021BC16 /* qidong.mp4 */,
+				D01EE4C420842EFD0021BC16 /* WSMovieController.h */,
+				D01EE4C520842EFD0021BC16 /* WSMovieController.m */,
+			);
+			path = StartVideo;
+			sourceTree = "<group>";
+		};
 		D03744EA207DB5F6001A0EBA = {
 			isa = PBXGroup;
 			children = (
@@ -525,8 +540,8 @@
 		D037452A207DD6BC001A0EBA /* XSTabBar */ = {
 			isa = PBXGroup;
 			children = (
-				D037452B207DD6F5001A0EBA /* XSMainTabBarViewController.h */,
-				D037452C207DD6F5001A0EBA /* XSMainTabBarViewController.m */,
+				D01EE4C120842D8E0021BC16 /* QKTabBarController.h */,
+				D01EE4C020842D8E0021BC16 /* QKTabBarController.m */,
 			);
 			path = XSTabBar;
 			sourceTree = "<group>";
@@ -534,6 +549,7 @@
 		D037452E207DD8B8001A0EBA /* MainInterface */ = {
 			isa = PBXGroup;
 			children = (
+				D01EE4C320842EEC0021BC16 /* StartVideo */,
 				D037494F207F3951001A0EBA /* Login */,
 				D0374533207DD921001A0EBA /* My */,
 				D0374532207DD91B001A0EBA /* Mall */,
@@ -688,8 +704,8 @@
 		D037455D207DDECB001A0EBA /* XSNav */ = {
 			isa = PBXGroup;
 			children = (
-				D037455E207DDEF2001A0EBA /* XSNavigationViewController.h */,
-				D037455F207DDEF2001A0EBA /* XSNavigationViewController.m */,
+				D01EE4BD20842D810021BC16 /* QKNavigationController.h */,
+				D01EE4BE20842D810021BC16 /* QKNavigationController.m */,
 			);
 			path = XSNav;
 			sourceTree = "<group>";
@@ -1414,6 +1430,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0374938207EFDD2001A0EBA /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
+				D01EE4C820842FBA0021BC16 /* qidong.mp4 in Resources */,
 				D03745EC207DED47001A0EBA /* Emoji.plist in Resources */,
 				D0FEE6642081AC5F00CDC3D5 /* README.md in Resources */,
 				D0374503207DB5F7001A0EBA /* LaunchScreen.storyboard in Resources */,
@@ -1458,7 +1475,6 @@
 				D037454D207DDB80001A0EBA /* HospitalViewController.m in Sources */,
 				D037454A207DDB73001A0EBA /* DiaryViewController.m in Sources */,
 				D03744FB207DB5F6001A0EBA /* ViewController.m in Sources */,
-				D0374560207DDEF2001A0EBA /* XSNavigationViewController.m in Sources */,
 				D0FEE66E2081AC5F00CDC3D5 /* AFURLResponseSerialization.m in Sources */,
 				D0374988207F43D8001A0EBA /* NinaBaseView.m in Sources */,
 				D0FEE66F2081AC5F00CDC3D5 /* AFHTTPSessionManager.m in Sources */,
@@ -1467,6 +1483,7 @@
 				D0FEE6662081AC5F00CDC3D5 /* UIRefreshControl+AFNetworking.m in Sources */,
 				D0F9FA6320803E7C006EB75A /* ProduceTableViewCell.m in Sources */,
 				D0374544207DDB4F001A0EBA /* FirstViewController.m in Sources */,
+				D01EE4BF20842D810021BC16 /* QKNavigationController.m in Sources */,
 				D0FEE6652081AC5F00CDC3D5 /* UIProgressView+AFNetworking.m in Sources */,
 				D037499B207F4DB1001A0EBA /* CarouseView.m in Sources */,
 				D0374961207F3B44001A0EBA /* IntegralViewController.m in Sources */,
@@ -1494,17 +1511,18 @@
 				D0374541207DDB43001A0EBA /* FirstView.m in Sources */,
 				D092197B2081C8F100A95BD1 /* HttpRequest.m in Sources */,
 				D0FEE66D2081AC5F00CDC3D5 /* AFImageDownloader.m in Sources */,
-				D037452D207DD6F5001A0EBA /* XSMainTabBarViewController.m in Sources */,
 				D037497C207F42C6001A0EBA /* InvitedMeViewController.m in Sources */,
 				D0374954207F3976001A0EBA /* LoginView.m in Sources */,
 				D0374976207F42B2001A0EBA /* MyQuestionViewController.m in Sources */,
 				D0FEE6712081AC5F00CDC3D5 /* AFURLRequestSerialization.m in Sources */,
+				D01EE4C220842D8F0021BC16 /* QKTabBarController.m in Sources */,
 				D0374553207DDBB1001A0EBA /* MallViewController.m in Sources */,
 				D092197A2081C8F100A95BD1 /* UploadParam.m in Sources */,
 				D0374550207DDBA5001A0EBA /* HospitalView.m in Sources */,
 				D0FEE66B2081AC5F00CDC3D5 /* UIWebView+AFNetworking.m in Sources */,
 				D0374556207DDBC6001A0EBA /* MallView.m in Sources */,
 				D03744F8207DB5F6001A0EBA /* AppDelegate.m in Sources */,
+				D01EE4C620842EFD0021BC16 /* WSMovieController.m in Sources */,
 				D0FEE6732081AC5F00CDC3D5 /* AFSecurityPolicy.m in Sources */,
 				D0374559207DDBF0001A0EBA /* MyViewController.m in Sources */,
 				D092197F2081F6B200A95BD1 /* SecondayViewController.m in Sources */,
@@ -1694,6 +1712,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8GZ24733V8;
 				ENABLE_BITCODE = NO;
@@ -1759,6 +1778,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8GZ24733V8;
 				ENABLE_BITCODE = NO;
