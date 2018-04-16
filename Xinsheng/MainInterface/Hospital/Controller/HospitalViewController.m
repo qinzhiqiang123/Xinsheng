@@ -23,6 +23,8 @@
                     RCConversationViewController *conversationVC = [[RCConversationViewController alloc]init];
                     conversationVC.conversationType = 1;
                     conversationVC.targetId =@"1234567";
+                    [conversationVC.chatSessionInputBarControl.pluginBoardView removeItemAtIndex:4];
+                    [conversationVC.chatSessionInputBarControl.pluginBoardView removeItemAtIndex:3];
                     conversationVC.title = @"官方客服";
                     [self.navigationController pushViewController:conversationVC animated:YES];
                 }else if ([sender isEqualToString:@"分享"])
