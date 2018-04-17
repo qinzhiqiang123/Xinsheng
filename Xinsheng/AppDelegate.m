@@ -22,10 +22,33 @@
     // Override point for customization after application launch.12312
    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
-    [self RYIM];
+    [self RYIM:launchOptions];
     [self UM];
     
+    /**
+     * 推送处理1
+     */
+    if ([application
+         respondsToSelector:@selector(registerUserNotificationSettings:)]) {
+        //注册推送, 用于iOS8以及iOS8之后的系统
+        UIUserNotificationSettings *settings = [UIUserNotificationSettings
+                                                settingsForTypes:(UIUserNotificationTypeBadge |
+                                                                  UIUserNotificationTypeSound |
+                                                                  UIUserNotificationTypeAlert)
+                                                categories:nil];
+        [application registerUserNotificationSettings:settings];
+    } else {
+        //注册推送，用于iOS8之前的系统
+        UIRemoteNotificationType myTypes = UIRemoteNotificationTypeBadge |
+        UIRemoteNotificationTypeAlert |
+        UIRemoteNotificationTypeSound;
+        [application registerForRemoteNotificationTypes:myTypes];
+    }
+
     
+    // 远程推送的内容
+    NSDictionary *remoteNotificationUserInfo = launchOptions[UIApplicationLaunchOptionsRemoteNotificationKey];
+    NSLog(@"asdsadsadsadsa:%@",remoteNotificationUserInfo);
     NSString *versionCache = [[NSUserDefaults standardUserDefaults] objectForKey:@"VersionCache"];//本地缓存的版本号  第一次启动的时候本地是没有缓存版本号的。
     NSString *version = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];//当前应用版本号
     
@@ -94,7 +117,7 @@
 }
 
 //融云
--(void)RYIM{
+-(void)RYIM:(NSDictionary *)launchOptions{
 
     [[RCIM sharedRCIM] initWithAppKey:@"mgb7ka1nm4dhg"];
 
@@ -106,12 +129,27 @@
     //    [RCIM sharedRCIM].portraitImageViewCornerRadius = 10;
     //开启用户信息和群组信息的持久化
     [RCIM sharedRCIM].enablePersistentUserInfoCache = YES;
+    
+    /**
+     * 统计推送打开率
+     */
+    [[RCIMClient sharedRCIMClient] recordLaunchOptionsEvent:launchOptions];
 
+    NSDictionary *pushServiceData = [[RCIMClient sharedRCIMClient] getPushExtraFromLaunchOptions:launchOptions];
+    if (pushServiceData) {
+        NSLog(@"该启动事件包含来自融云的推送服务");
+        for (id key in [pushServiceData allKeys]) {
+            NSLog(@"%@", pushServiceData[key]);
+        }
+    } else {
+        NSLog(@"该启动事件不包含来自融云的推送服务");
+    }
+    
     //设置群组内用户信息源。如果不使用群名片功能，可以不设置
     //  [RCIM sharedRCIM].groupUserInfoDataSource = RCDDataSource;
     //  [RCIM sharedRCIM].enableMessageAttachUserInfo = YES;
     //设置接收消息代理
-    [RCIM sharedRCIM].receiveMessageDelegate = self;
+//    [RCIM sharedRCIM].receiveMessageDelegate = self;
     //    [RCIM sharedRCIM].globalMessagePortraitSize = CGSizeMake(46, 46);
     //开启输入状态监听
     [RCIM sharedRCIM].enableTypingStatus = YES;
@@ -150,7 +188,7 @@
     
 
 //    ZgBwoREn81wiHHrzCx1G7UiA8cB3nPio56mw4Lzd4hQvMmbarmVQLTWMJKyC9xE4EOD9+MCxSZgZTAPKLEl4Sjd9hGD2ho30
-    [[RCIM sharedRCIM] connectWithToken:@"lPNCxSaE55t4AjCA9CpjEvcXVp29bZzw9OpY3jHsN0lkBsVJzlr4Fc4YvQiQ35fm2HSRqcTy1NHOFaYXOhiv/w=="     success:^(NSString *userId) {
+    [[RCIM sharedRCIM] connectWithToken:@"26nnqLmIh1tMZxy7OjvbDEiA8cB3nPio56mw4Lzd4hQvMmbarmVQLY5vA2mi4xHiMoLXuvHKRY6lnpWFwD3k0A=="     success:^(NSString *userId) {
         NSLog(@"登陆成功。当前登录的用户ID：%@", userId);
     } error:^(RCConnectErrorCode status) {
         NSLog(@"登陆的错误码为:%d", status);
@@ -211,6 +249,61 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+}
+
+
+/**
+ * 推送处理2
+ */
+//注册用户通知设置
+- (void)application:(UIApplication *)application
+didRegisterUserNotificationSettings:
+(UIUserNotificationSettings *)notificationSettings {
+    // register to receive notifications
+    [application registerForRemoteNotifications];
+}
+
+
+/**
+ * 推送处理3
+ */
+- (void)application:(UIApplication *)application
+didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+    NSString *token =
+    [[[[deviceToken description] stringByReplacingOccurrencesOfString:@"<"
+                                                           withString:@""]
+      stringByReplacingOccurrencesOfString:@">"
+      withString:@""]
+     stringByReplacingOccurrencesOfString:@" "
+     withString:@""];
+    
+    [[RCIMClient sharedRCIMClient] setDeviceToken:token];
+}
+
+
+
+- (void)application:(UIApplication *)application
+didReceiveRemoteNotification:(NSDictionary *)userInfo {
+    
+    /**
+     * 统计推送打开率
+     */
+    [[RCIMClient sharedRCIMClient] recordRemoteNotificationEvent:userInfo];
+    
+    /**
+     * 获取融云推送服务扩展字段
+     * nil 表示该启动事件不包含来自融云的推送服务
+     */
+    NSDictionary *pushServiceData = [[RCIMClient sharedRCIMClient] getPushExtraFromRemoteNotification:userInfo];
+    if (pushServiceData) {
+        NSLog(@"该远程推送包含来自融云的推送服务");
+        for (id key in [pushServiceData allKeys]) {
+            NSLog(@"key = %@, value = %@", key, pushServiceData[key]);
+        }
+    } else {
+        NSLog(@"该远程推送不包含来自融云的推送服务");
+    }
+    
 }
 
 
