@@ -42,7 +42,7 @@
 
 -(void)createUI
 {
-    tabArray=[[NSArray alloc]initWithObjects:@"医院",@"专家", @"日记",@"植发",@"眉毛",@"签到",nil];
+    tabArray=[[NSArray alloc]initWithObjects:@"医院",@"专家", @"日记",@"植发",@"眉毛",@"签到",@"眉毛",@"签到",nil];
 
     _tableView=[[UITableView alloc]initWithFrame:self.bounds style:UITableViewStyleGrouped];
     _tableView.dataSource=self;
@@ -65,7 +65,7 @@
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    return 580-145+9+(MAIN_WIDTH-30)/3;
+    return 580-145+9+(MAIN_WIDTH-30)/3+20;
 }
 
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
@@ -75,7 +75,7 @@
     
     
     carouseView = [[CarouseView alloc] init];
-    carouseView.frame = CGRectMake(0, 0, MAIN_WIDTH, 200);
+    carouseView.frame = CGRectMake(0, 0, MAIN_WIDTH, 260);
     carouseView.datasource = self;
     carouseView.delegate = self;
     [headView addSubview:carouseView];
@@ -140,35 +140,37 @@
     searLabel.textColor=[UIColor colorWithRed:0.8 green:0.8 blue:0.8 alpha:1];
     
     
-    UIView *yyView =[[UIView alloc]initWithFrame:CGRectMake(15, CGRectGetMaxY(carouseView.frame)-15, MAIN_WIDTH-30, 200)];
+    UIView *yyView =[[UIView alloc]initWithFrame:CGRectMake(0, CGRectGetMaxY(carouseView.frame), MAIN_WIDTH, 175)];
     yyView.layer.cornerRadius = 10;
     yyView.layer.shadowColor = [UIColor blackColor].CGColor;
-    yyView.layer.shadowOffset = CGSizeMake(0, 0);
+//    yyView.layer.shadowOffset = CGSizeMake(0, 0);
     yyView.backgroundColor=[UIColor whiteColor];
-    yyView.layer.shadowOpacity = 0.5;
-    yyView.layer.shadowRadius = 5;
+//    yyView.layer.shadowOpacity = 0.5;
+//    yyView.layer.shadowRadius = 5;
     [headView addSubview:yyView];
-    int wigth=50;
+    int wigth=45;
+    int count=4;
+    int imgCount=3;
     for (int i=0; i<tabArray.count; i++) {
-        UIImageView *tabImageView =[[UIImageView alloc]initWithFrame:CGRectMake((yyView.frame.size.width-wigth*3)/4+i*(wigth+(yyView.frame.size.width-wigth*3)/4), 15, wigth, wigth)];
+        UIImageView *tabImageView =[[UIImageView alloc]initWithFrame:CGRectMake(20+i*(wigth+(yyView.frame.size.width-wigth*count-40)/imgCount), 10, wigth, wigth)];
         tabImageView.image=[UIImage imageNamed:tabArray[i]];
         [yyView addSubview:tabImageView];
 
-        UILabel *tabLabel =[[UILabel alloc]initWithFrame:CGRectMake((yyView.frame.size.width-wigth*3)/4+i*(wigth+(yyView.frame.size.width-wigth*3)/4), CGRectGetMaxY(tabImageView.frame)+10, wigth, 14)];
+        UILabel *tabLabel =[[UILabel alloc]initWithFrame:CGRectMake(20+i*(wigth+(yyView.frame.size.width-wigth*count-40)/imgCount), CGRectGetMaxY(tabImageView.frame)+10, wigth, 14)];
         tabLabel.text=tabArray[i];
         tabLabel.font=[UIFont systemFontOfSize:14];
         tabLabel.textColor=[UIColor blackColor];
         tabLabel.textAlignment=NSTextAlignmentCenter;
         [yyView addSubview:tabLabel];
-        UIButton *tabButton =[[UIButton alloc]initWithFrame:CGRectMake((yyView.frame.size.width-wigth*3)/4+i*(wigth+(yyView.frame.size.width-wigth*3)/4), 15, wigth, 60)];
+        UIButton *tabButton =[[UIButton alloc]initWithFrame:CGRectMake((yyView.frame.size.width-wigth*count)/imgCount+i*(wigth+(yyView.frame.size.width-wigth*count)/imgCount), 15, wigth, 60)];
         [tabButton addTarget:self action:@selector(tabButtonClick:) forControlEvents:UIControlEventTouchUpInside];
         [tabButton setTitle:tabArray[i] forState:UIControlStateNormal];
         [tabButton setTitleColor:[UIColor clearColor] forState:UIControlStateNormal];
         [yyView addSubview:tabButton];
-        if (i>2) {
-            tabImageView.frame=CGRectMake((yyView.frame.size.width-wigth*3)/4+(i-3)*(wigth+(yyView.frame.size.width-wigth*3)/4),110, wigth, wigth);
-            tabLabel.frame=CGRectMake((yyView.frame.size.width-wigth*3)/4+(i-3)*(wigth+(yyView.frame.size.width-wigth*3)/4), CGRectGetMaxY(tabImageView.frame)+10, wigth, 14);
-            tabButton.frame=CGRectMake((yyView.frame.size.width-wigth*3)/4+(i-3)*(wigth+(yyView.frame.size.width-wigth*3)/4), 110, wigth, 60);
+        if (i>count-1) {
+            tabImageView.frame=CGRectMake(20+(i-count)*(wigth+(yyView.frame.size.width-wigth*count-40)/imgCount),90, wigth, wigth);
+            tabLabel.frame=CGRectMake(20+(i-count)*(wigth+(yyView.frame.size.width-wigth*count-40)/imgCount), CGRectGetMaxY(tabImageView.frame)+10, wigth, 14);
+            tabButton.frame=CGRectMake((yyView.frame.size.width-wigth*count)/imgCount+(i-count)*(wigth+(yyView.frame.size.width-wigth*count)/imgCount), 90, wigth, 60);
         }
 
 
