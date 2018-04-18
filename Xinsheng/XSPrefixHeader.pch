@@ -18,6 +18,12 @@
 #import "CarouseView.h"
 #import "AFNetworking.h"
 #import "HttpRequest.h"
+#import "UIColor+XSColor.h"
+// 定义这个常量，就可以不用在开发过程中使用"mas_"前缀。
+#define MAS_SHORTHAND
+// 定义这个常量，就可以让Masonry帮我们自动把基础数据类型的数据，自动装箱为对象类型。
+#define MAS_SHORTHAND_GLOBALS
+#import "Masonry.h"
 
 //获取导航栏+状态栏的高度
 #define getRectNavAndStatusHight  self.navigationController.navigationBar.frame.size.height+[[UIApplication sharedApplication] statusBarFrame].size.height
@@ -25,7 +31,7 @@
 
 
 //主题色
-#define MAIN_COLOR [UIColor redColor]
+#define MAIN_COLOR  [UIColor colorWithHexString:@"#ce7667"]
 
 
 //通用字体大小

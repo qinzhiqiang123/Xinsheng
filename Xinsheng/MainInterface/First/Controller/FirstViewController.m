@@ -9,8 +9,10 @@
 #import "FirstViewController.h"
 #import "FirstView.h"
 #import "SecondayViewController.h"
-@interface FirstViewController ()
+#import "JFCityViewController.h"
+@interface FirstViewController ()<JFCityViewControllerDelegate>
 
+@property (nonatomic,strong)FirstView *firstView;
 @end
 
 @implementation FirstViewController
@@ -18,16 +20,32 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 //    self.tabBarController.navigationItem.title=@"首页";
-    FirstView *firstView =[[FirstView alloc]initWithFrame:self.view.bounds];
-    [firstView showFirstBlock:^(NSString *sender) {
+    self.firstView =[[FirstView alloc]initWithFrame:self.view.bounds];
+    [self.firstView showFirstBlock:^(NSString *sender) {
         NSLog(@"sadasdasd:%@",sender);
-        SecondayViewController *secVc=[[SecondayViewController alloc]init];
-        secVc.title=sender;
-        [self.navigationController pushViewController:secVc animated:YES];
+        if ([sender isEqualToString:@"城市"]) {
+            JFCityViewController *cityViewController = [[JFCityViewController alloc] init];
+            //  设置代理
+            cityViewController.delegate = self;
+            cityViewController.title = sender;
+            //  给JFCityViewController添加一个导航控制器
+            cityViewController.navigationController.navigationBarHidden=NO;
+            [self.navigationController pushViewController:cityViewController animated:YES];
+        }else{
+            SecondayViewController *secVc=[[SecondayViewController alloc]init];
+            secVc.title=sender;
+            [self.navigationController pushViewController:secVc animated:YES];
+        }
     }];
-    [self.view addSubview:firstView];
+    [self.view addSubview:self.firstView];
 
     // Do any additional setup after loading the view.
+}
+
+- (void)cityName:(NSString *)name {
+    //code...
+    NSLog(@"dsasda:%@",name);
+    [self.firstView.addressButton setTitle:name forState:UIControlStateNormal];
 }
 
 -(void)viewWillAppear:(BOOL)animated{

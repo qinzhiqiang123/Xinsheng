@@ -123,11 +123,12 @@ static const double kTimerInterval = 2.0;
         // 设置未被选中时小圆点颜色
         _pageControl.pageIndicatorTintColor = [UIColor whiteColor];
         // 设置被选中时小圆点颜色
-        _pageControl.currentPageIndicatorTintColor = [UIColor greenColor];
+        _pageControl.currentPageIndicatorTintColor =[UIColor colorWithHexString:@"#ce7667"];
+        
         // 设置能手动点小圆点条改变页数
         _pageControl.enabled = YES ;
         // 把导航条设置为半透明状态
-        [_pageControl setBackgroundColor:[[UIColor blackColor] colorWithAlphaComponent:0.2]];
+//        [_pageControl setBackgroundColor:[[UIColor blackColor] colorWithAlphaComponent:0.2]];
         // 设置分页控制器的事件
         [_pageControl addTarget:self action:@selector(pageControlTouched) forControlEvents:UIControlEventValueChanged];
     }

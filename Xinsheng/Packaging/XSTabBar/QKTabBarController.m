@@ -27,7 +27,8 @@
     
     [self setupChildVc:[[FirstViewController alloc] init] title:@"首页" image:@"tabBar_first" selectedImage:@"tabBar_first_click" isHiddenNavgationBar:NO];
     [self setupChildVc:[[DiaryViewController alloc] init] title:@"社区" image:@"tabBar_fx" selectedImage:@"tabBar_fx_click" isHiddenNavgationBar:NO];
-    [self setupChildVc:[[HospitalViewController alloc] init] title:@"" image:@"plus" selectedImage:@"" isHiddenNavgationBar:NO];
+//    [self setupChildVc:[[HospitalViewController alloc] init] title:@"" image:@"plus" selectedImage:@"" isHiddenNavgationBar:NO];
+        [self setupChildVc:[[HospitalViewController alloc] init] title:@"咨询" image:@"tabBar_zx" selectedImage:@"tabBar_zx_click" isHiddenNavgationBar:NO];
     [self setupChildVc:[[MallViewController alloc] init] title:@"商城" image:@"tabBar_axg" selectedImage:@"tabBar_axg_click" isHiddenNavgationBar:NO];
 //  个人
     [self setupChildVc:[[MyViewController alloc] init] title:@"我的" image:@"tabBar_my" selectedImage:@"tabBar_my_click" isHiddenNavgationBar:NO];
@@ -164,10 +165,10 @@
     vc.tabBarItem.title = title;
     vc.tabBarItem.image = [[UIImage imageNamed:image] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     vc.tabBarItem.selectedImage = [[UIImage imageNamed:selectedImage] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    if(index==2){
-        vc.tabBarItem.imageInsets = UIEdgeInsetsMake(6, 0, -6, 0);
+//    if(index==2){
+//        vc.tabBarItem.imageInsets = UIEdgeInsetsMake(6, 0, -6, 0);
 //        vc.tabBarItem.selectedImage.imageAsset=UIEdgeInsetsMake(8, 5, 2, 5);
-    }
+//    }
     [[UITabBarItem appearance] setTitlePositionAdjustment:UIOffsetMake(0, -3)];
     vc.tabBarItem.tag = index;
     index++;
@@ -199,11 +200,13 @@
     //设置未选中的TabBarItem的字体颜色、大小
     NSMutableDictionary *attrs = [NSMutableDictionary dictionary];
     attrs[NSFontAttributeName] = [UIFont systemFontOfSize:12];
-    attrs[NSForegroundColorAttributeName] = [UIColor grayColor];
+    attrs[NSForegroundColorAttributeName] =[UIColor colorWithHexString:@"#333333"];
+    
+    
     //设置选中了的TabBarItem的字体颜色、大小
     NSMutableDictionary *selectedAttrs = [NSMutableDictionary dictionary];
     selectedAttrs[NSFontAttributeName] = [UIFont systemFontOfSize:12];
-    selectedAttrs[NSForegroundColorAttributeName] = MAIN_COLOR;
+    selectedAttrs[NSForegroundColorAttributeName] = [UIColor colorWithHexString:@"#ce7667"];
     
     UITabBarItem *item = [UITabBarItem appearance];
     

@@ -15,5 +15,5 @@ typedef void(^first_block)(id);
 
 @property (nonatomic,copy) first_block firstBlock;
 -(void)showFirstBlock:(first_block)firBlock;
-
+@property (nonatomic,strong) UIButton *addressButton;
 @end
