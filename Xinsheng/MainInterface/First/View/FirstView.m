@@ -182,15 +182,25 @@
     UIButton *xsButton =[[UIButton alloc]initWithFrame:CGRectMake(0, 0, centerView.frame.size.width/3, centerView.frame.size.height)];
     [xsButton setImage:[UIImage imageNamed:@"限时特惠"] forState:UIControlStateNormal];
 //    xsButton.backgroundColor=[UIColor blackColor];
+    [xsButton setTitle:@"限时特惠" forState:UIControlStateNormal];
+    [xsButton setTitleColor:[UIColor clearColor] forState:UIControlStateNormal];
+    [xsButton addTarget:self action:@selector(zxButtonClick:) forControlEvents:UIControlEventTouchUpInside];
     [centerView addSubview:xsButton];
 
     for (int i=0; i<2; i++) {
         UIButton *zxButton =[[UIButton alloc]initWithFrame:CGRectMake(CGRectGetMaxX(xsButton.frame)+10, 0+i*((centerView.frame.size.height-5)/2+5), (centerView.frame.size.width/3-10)*2, (centerView.frame.size.height-5)/2)];
+        [zxButton setTitleColor:[UIColor clearColor] forState:UIControlStateNormal];
+        [zxButton addTarget:self action:@selector(zxButtonClick:) forControlEvents:UIControlEventTouchUpInside];
+        [centerView addSubview:xsButton];
 //        zxButton.backgroundColor=[UIColor redColor];
         if (i==0) {
              [zxButton setImage:[UIImage imageNamed:@"在线商城"] forState:UIControlStateNormal];
+            [zxButton setTitle:@"在线商城" forState:UIControlStateNormal];
+    
         }else{
              [zxButton setImage:[UIImage imageNamed:@"脱发检测"] forState:UIControlStateNormal];
+            [zxButton setTitle:@"脱发检测" forState:UIControlStateNormal];
+       
         }
         [centerView addSubview:zxButton];
     }
@@ -259,7 +269,11 @@
 //
     return headView;
 }
-
+-(void)zxButtonClick:(UIButton *)sender{
+    if (_firstBlock!=nil) {
+            _firstBlock(sender.titleLabel.text);
+    }
+ }
 
 -(void)addressButtonClick:(UIButton *)sender
 {
